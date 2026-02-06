@@ -1,0 +1,29 @@
+<div class="customCard cardBack">
+  {{#image}}
+  <div class="imageContainerBack">
+    {{image}}
+  </div>
+  {{/image}}
+
+  <div class="wordHeader">
+    <div class="targetWord">{{Word}}</div>
+    {{#audio}}
+    <div class="audioButton">{{audio}}</div>
+    {{/audio}}
+  </div>
+
+  <div class="section">
+    <div class="header">EXAMPLE</div>
+    <div class="exampleSentence">{{Example Sentence}}</div>
+    {{#Sentence Translation}}
+    <div class="sentenceTranslation">{{Sentence Translation}}</div>
+    {{/Sentence Translation}}
+  </div>
+
+  <div class="section">
+    <div class="header">DEFINITION</div>
+    <div class="definitionsContainer">
+      {{Definitions}}
+    </div>
+  </div>
+</div>

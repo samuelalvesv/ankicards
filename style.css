@@ -1,0 +1,164 @@
+:root {
+  --max-width-card: 450px;
+  --font-size-card: 16px;
+  --font-size-word: 32px;
+  --font-size-header: 12px;
+  
+  --color-bg: #ffffff;
+  --color-text: #1a1a1b;
+  --color-text-secondary: #5c5c5c;
+  --color-accent: #6366f1;
+  --color-divider: #f0f0f0;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  
+  /* Night Mode */
+  --color-night-bg: #121212;
+  --color-night-text: #e1e1e1;
+  --color-night-text-secondary: #a0a0a0;
+  --color-night-divider: #2d2d2d;
+}
+
+.card {
+  font-family: "Inter", -apple-system, system-ui, sans-serif;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.customCard {
+  background-color: var(--color-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px var(--color-shadow);
+  width: 100%;
+  max-width: var(--max-width-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  margin: 0 auto;
+}
+
+.nightMode .customCard {
+  background-color: var(--color-night-bg);
+  color: var(--color-night-text);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Front Card specific */
+.frontCard {
+  min-height: 200px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Containers */
+.imageContainer, .imageContainerBack {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.imageContainer {
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.imageContainer img, .imageContainerBack img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.nightMode .imageContainer, .nightMode .imageContainerBack {
+  background: #1a1a1a;
+}
+
+.audioContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Header Section */
+.wordHeader {
+  padding: 24px 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.targetWord {
+  font-size: var(--font-size-word);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--color-accent);
+}
+
+.audioButton {
+  transform: scale(1.2);
+}
+
+/* Content Sections */
+.section {
+  padding: 16px 24px;
+  border-top: 1px solid var(--color-divider);
+}
+
+.nightMode .section {
+  border-top-color: var(--color-night-divider);
+}
+
+.header {
+  font-size: var(--font-size-header);
+  font-weight: 800;
+  color: var(--color-text-secondary);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.nightMode .header {
+  color: var(--color-night-text-secondary);
+}
+
+.exampleSentence {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.sentenceTranslation {
+  font-size: 0.95em;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.nightMode .sentenceTranslation {
+  color: var(--color-night-text-secondary);
+}
+
+.definitionsContainer {
+  line-height: 1.6;
+}
+
+/* Anki Audio Button Styling Override */
+.replay-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.replay-button svg path {
+  fill: var(--color-accent);
+}
+
+/* Adjustments for Mobile */
+@media (max-width: 480px) {
+  .customCard {
+    border-radius: 12px;
+  }
+  .targetWord {
+    font-size: 26px;
+  }
+}
